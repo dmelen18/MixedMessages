@@ -2,7 +2,7 @@ const generateRandom = (num) => {
     return Math.floor(Math.random() * num);
 };
 
-const topics = {
+const quotes = {
     michael: ['That has sort of an oaky afterbirth', 'I...DECLARE...BANKRUPTCY', 'It\'s Britney, bitch', 
     'Where are the turtles?!', 'I love inside jokes. I hope to be a part of one someday'],
     kevin: ['I have very little patientce for stupidity', 'I wanted to eat a Pig in a Blanket, in a Blanket', 
@@ -15,18 +15,18 @@ const topics = {
 }
 
 const messages = [];
-for(let key in topics){
-    const rand = generateRandom(topics[key].length);
+for(let key in quotes){
+    const rand = generateRandom(quotes[key].length);
     
     switch(key){
         case 'michael':
-            messages.push(`${topics[key][rand]} - Michael Scott`);
+            messages.push(`${quotes[key][rand]} - Michael Scott`);
             break;
         case 'kevin':
-            messages.push(`${topics[key][rand]} - Kevin Malone`);
+            messages.push(`${quotes[key][rand]} - Kevin Malone`);
             break;
         case 'dwight':
-            messages.push(`${topics[key][rand]} - Dwight Schrute`);
+            messages.push(`${quotes[key][rand]} - Dwight Schrute`);
             break;
         default:
 
